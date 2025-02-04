@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Info Form</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-panel">
+        <img src="/images/registration.png" />
+    </div>
+
+    <div class="form-panel">
+      <h1 class="form-title">Personal info</h1>
+      <form action="#" class="form" onsubmit="savePersonalInfo(event)">
+        <div class="form-group">
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone number</label>
+          <input type="tel" id="phone-number" placeholder="Enter your Phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="discord-id">Discord ID</label>
+          <input type="text" id="discord-id" placeholder="Enter your discord ID">
+        </div>
+
+        <div class="form-group switch-group">
+          <label for="team-leader">Are you a team leader or not?</label>
+          <label class="switch">
+            <input type="checkbox" id="team-leader">
+            <span class="slider"></span>
+          </label>
+        </div>
+        
+        <div class="form-group" id="teamCodeGroup" >
+          <label for="teamCode">Team Code</label>
+          <input type="text" id="teamCode" placeholder="Enter your team code">
+        </div>
+        <button type="submit" class="submit-button">Continue →</button>
+      </form>
+      
+      <script>
+         const teamLeaderCheckbox = document.getElementById('team-leader');
+  const teamCodeGroup = document.getElementById('teamCodeGroup');
+
+  teamLeaderCheckbox.addEventListener('change', () => {
+    teamCodeGroup.style.display = teamLeaderCheckbox.checked ? 'none' : 'block';
+  });
+
+        function savePersonalInfo(event) {
+          event.preventDefault();
+          const personalInfo = {
+            fullName: document.getElementById("full-name").value,
+            email: document.getElementById("email").value,
+            phoneNumber: document.getElementById("phone-number").value,
+            discordId: document.getElementById("discord-id").value,
+            teamCode: document.getElementById("teamCode").value,
+          };
+          localStorage.setItem("personalInfo", JSON.stringify(personalInfo));
+          window.location.href = "register2.html";
+        }
+      </script>
+      
+    </div>
+  </div>
+</body>
+</html>

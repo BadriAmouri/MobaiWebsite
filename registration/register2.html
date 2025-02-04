@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Info Form</title>
+  <link rel="stylesheet" href="register2.css">
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-panel">
+        <img src="/images/registration.png" />
+    </div>
+
+    <div class="form-panel">
+      <h1 class="form-title">Educational info</h1>
+      <form action="#" class="form" onsubmit="saveEducationalInfo(event)">
+        <div class="form-group">
+          <label for="university">University name</label>
+          <input type="text" id="university" placeholder="Enter your University name" required>
+        </div>
+        <div class="form-group">
+          <label for="field-of-study">Field of study</label>
+          <input type="text" id="field-of-study" placeholder="Enter your Field of Study" required>
+        </div>
+        <div class="form-group">
+          <label for="yearOfStudy">Year of study</label>
+          <input type="number" id="yearOfStudy" placeholder="Enter your Year" required>
+        </div>
+        <button type="submit" class="submit-button">Continue →</button>
+      </form>
+      
+      <script>
+        function saveEducationalInfo(event) {
+          event.preventDefault();
+          const educationalInfo = {
+            university: document.getElementById("university").value,
+            fieldOfStudy: document.getElementById("field-of-study").value,
+            yearOfStudy: document.getElementById("yearOfStudy").value,
+          };
+          localStorage.setItem("educationalInfo", JSON.stringify(educationalInfo));
+          window.location.href = "register3.html";
+        }
+      </script>
+      
+    </div>
+  </div>
+</body>
+</html>

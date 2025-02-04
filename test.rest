@@ -1,0 +1,91 @@
+### Register Team Leader
+POST https://mobai-backend.vercel.app/register
+Content-Type: application/json
+
+{
+  "fullName": "Bob Johnson",
+  "email": "sallio@example.com",
+  "phoneNumber": "0987654321",
+  "role": "Designer",
+  "yearOfStudy": "2",
+  "university": "ABC University",
+  "fieldOfStudy": "Design",
+  "motivation": "I want to design user-friendly apps.",
+  "gitHubLink": "https://github.com/bobjohnson",
+  "linkedInLink": "https://linkedin.com/in/bobjohnson",
+  "expertiseLevel": "Beginner",
+  "teamCode": "766c45"
+}
+
+### Register Team Member
+POST https://mobai-backend.vercel.app/register
+Content-Type: application/json
+
+{
+  "fullName": "Alice Smith",
+  "email": "alice@example.com",
+  "phoneNumber": "1234567890",
+  "role": "Developer",
+  "yearOfStudy": "3",
+  "university": "XYZ University",
+  "fieldOfStudy": "Computer Science",
+  "motivation": "I want to develop innovative solutions.",
+  "gitHubLink": "https://github.com/alicesmith",
+  "linkedInLink": "https://linkedin.com/in/alicesmith",
+  "expertiseLevel": "Intermediate",
+  "teamCode": "766c45"
+}
+
+### Test Email Already Registered
+POST https://mobai-backend.vercel.app/register
+Content-Type: application/json
+
+{
+  "fullName": "Bob Johnson",
+  "email": "boaaaaby@example.com",
+  "phoneNumber": "0987654321",
+  "role": "Designer",
+  "yearOfStudy": "2",
+  "university": "ABC University",
+  "fieldOfStudy": "Design",
+  "motivation": "I want to design user-friendly apps.",
+  "gitHubLink": "https://github.com/bobjohnson",
+  "linkedInLink": "https://linkedin.com/in/bobjohnson",
+  "expertiseLevel": "Beginner"
+}
+
+### Test Non-Existing Team Code
+POST https://mobai-backend.vercel.app/register
+Content-Type: application/json
+
+{
+  "fullName": "Charlie Brown",
+  "email": "charlie@example.com",
+  "phoneNumber": "1122334455",
+  "role": "Tester",
+  "yearOfStudy": "1",
+  "university": "DEF University",
+  "fieldOfStudy": "Software Engineering",
+  "motivation": "I want to ensure software quality.",
+  "gitHubLink": "https://github.com/charliebrown",
+  "linkedInLink": "https://linkedin.com/in/charliebrown",
+  "expertiseLevel": "Beginner",
+  "teamCode": "nonexistent"
+}
+
+### Test Incomplete Fields
+POST https://mobai-backend.vercel.app/register
+Content-Type: application/json
+
+{
+  "fullName": "Diana Prince",
+  "email": "diana@example.com",
+  "phoneNumber": "5566778899",
+  "role": "Analyst",
+  "yearOfStudy": "4",
+  "university": "GHI University",
+  "fieldOfStudy": "Data Science",
+  "motivation": "I want to analyze data effectively.",
+  "gitHubLink": "https://github.com/dianaprince",
+  "linkedInLink": "https://linkedin.com/in/dianaprince"
+}

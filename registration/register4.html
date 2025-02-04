@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivation Form</title>
+  <link rel="stylesheet" href="register4.css">
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-panel">
+        <img src="/images/registration.png" />
+    </div>
+
+    <div class="form-panel">
+      <h1 class="form-title">Motivation</h1>
+      <form action="#" class="form" onsubmit="submitRegistration(event)">
+        <label >How did you hear about Mobai</label>
+        <select id="source" name="source" class="input-field" required>
+          <option value="">Select</option>
+          <option value="Social Media">Instagram</option>
+          <option value="Friend">Friend</option>
+          <option value="Advertisement">LinkedIn</option>
+        </select>
+        <label >Motivation to participate</label>
+        <textarea id="motivation" name="motivation" class="input-field" placeholder="Enter your motivation" required></textarea>
+      
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+      
+      <script>
+        async function submitRegistration(event) {
+          event.preventDefault();
+      
+          const personalInfo = JSON.parse(localStorage.getItem("personalInfo"));
+          const educationalInfo = JSON.parse(localStorage.getItem("educationalInfo"));
+          const skillsInfo = JSON.parse(localStorage.getItem("skillsInfo"));
+          const motivationInfo = {
+            source: document.getElementById("source").value,
+            motivation: document.getElementById("motivation").value,
+          };
+      
+          const registrationData = {
+            ...personalInfo,
+            ...educationalInfo,
+            ...skillsInfo,
+            ...motivationInfo,
+          };
+      
+          try {
+            console.log(" the registration data is : ", registrationData)
+  const response = await fetch("https://mobai-backend.vercel.app/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(registrationData),
+  });
+
+  if (response.ok) {
+    const responseData = await response.json(); // Parse response
+    alert(`Registration successful! , your Team Code is : ${responseData.code || " "} `);
+    localStorage.clear();
+  } else {
+    // Extract and display error details if available
+    const errorData = await response.json();
+    console.error("Registration failed:", errorData);
+    alert(`Registration failed: ${errorData.message || "Please check your input."}`);
+  }
+} catch (error) {
+  console.error("Error submitting form:", error);
+  alert(`An error occurred: ${error.message}`);
+}
+
+        }
+      </script>
+      
+     
+    </div>
+  </div>
+</body>
+</html>

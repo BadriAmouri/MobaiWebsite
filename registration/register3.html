@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level and Skills Form</title>
+  <link rel="stylesheet" href="register3.css">
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-panel">
+        <img src="/images/registration.png" />
+    </div>
+
+    <div class="form-panel">
+      <h1 class="form-title">Level and Skills</h1>
+      <form action="#" class="form" onsubmit="saveSkillsInfo(event)">
+        <div class="form-group">
+          <label for="role">Role in the team</label>
+          <input type="text" id="role" placeholder="Enter your role" required>
+        </div>
+        <label for="role">Your Experience </label>
+        <select id="expertiseLevel" name="expertiseLevel" class="input-field" required>
+          <option value="">Select</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Medium">Medium</option>
+          <option value="Expert">Expert</option>
+        </select>
+
+
+        <div class="form-group">
+          <label for="portfolio">Portfolio link (optional)</label>
+          <input type="text" id="portfolio" placeholder="Enter your Portfolio link">
+        </div>
+
+        <div class="form-group">
+          <label for="linkedInLink">LinkedIn link (optional)</label>
+          <input type="text" id="linkedInLink" placeholder="Enter your linkedIn link">
+        </div>
+
+        <div class="form-group">
+          <label for="gitHubLink">Github link (optional)</label>
+          <input type="text" id="gitHubLink" placeholder="Enter your gitHubLink link">
+        </div>
+        <button type="submit" class="submit-button">Continue →</button>
+      </form>
+      
+      <script>
+        function saveSkillsInfo(event) {
+          event.preventDefault();
+          const skillsInfo = {
+            role: document.getElementById("role").value,
+            expertiseLevel: document.getElementById("expertiseLevel").value,
+            portfolio: document.getElementById("portfolio").value,
+            gitHubLink : document.getElementById("gitHubLink").value,
+            linkedInLink : document.getElementById("linkedInLink").value
+          };
+          localStorage.setItem("skillsInfo", JSON.stringify(skillsInfo));
+          window.location.href = "register4.html";
+        }
+      </script>
+      
+    </div>
+  </div>
+</body>
+</html>
