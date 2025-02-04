@@ -1200,13 +1200,11 @@ footer {
     font-family: 'FuturaLT-Light';
 }
 
-@media (max-width: 480px) {
-    .footer-container{
-        flex-direction: column;
-    }
+@media (max-width: 760px) {
     .footer-media-links{
         visibility: none;
         display: none;
+
     }
 }
 
