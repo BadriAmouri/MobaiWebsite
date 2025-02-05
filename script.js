@@ -126,7 +126,7 @@
           {
             question: "How does team formation work? ",
             answer:
-              "You must form a team before registering, as individual registrations are not accepted. Each team can have up to 4 members.",
+              "You must form a team before registering, as individual registrations are not accepted. Each team can have up to 6 members.",
           },
           {
             question: " What kind of projects can we build?",
@@ -263,6 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
+    initialSlide: 1, // Set this to the index of the middle slide
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
