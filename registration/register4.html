@@ -59,7 +59,11 @@
 
   if (response.ok) {
     const responseData = await response.json(); // Parse response
-    alert(`Registration successful! , your Team Code is : ${responseData.code || " "} `);
+    if (responseData.code) {
+  alert(`Registration successful! Your Team Code is: ${responseData.code}`);
+} else {
+  alert(`Registration successful!`);
+}
     localStorage.clear();
   setTimeout(() => {
     window.location.href = "/"; // Redirects after 3 seconds
