@@ -33,6 +33,7 @@
     font-size: 24px;
     text-decoration: none;
     font-weight: bold;
+    width: 150px;
   }
 
   /* Navigation Links */
@@ -84,6 +85,7 @@
       flex-direction: column;
       align-items: center;
       display: none;
+      z-index: 10;
     }
     .navbar{
         width:auto;
@@ -142,6 +144,7 @@
     flex-direction: column;
     gap: 20px;
 }
+
 
 .t_1 {
     font-size: 64px;
@@ -1105,7 +1108,7 @@ footer {
 }
 
 .footer-container {
-    height: 800px;
+    height: 500px;
     width: 100%;
     display: flex;
     justify-content: space-between;

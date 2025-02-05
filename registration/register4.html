@@ -61,6 +61,9 @@
     const responseData = await response.json(); // Parse response
     alert(`Registration successful! , your Team Code is : ${responseData.code || " "} `);
     localStorage.clear();
+  setTimeout(() => {
+    window.location.href = "/"; // Redirects after 3 seconds
+  }, 5000);
   } else {
     // Extract and display error details if available
     const errorData = await response.json();

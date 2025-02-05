@@ -1,8 +1,11 @@
  // Toggle the mobile menu
  function toggleMenu() {
-    var navMenu = document.getElementById("nav-menu");
-    navMenu.classList.toggle("active");
-  }
+  var navMenu = document.getElementById("nav-menu");
+  var hamburgerIcon = document.querySelector(".hamburger");
+  navMenu.classList.toggle("active");
+  hamburgerIcon.classList.toggle("active");
+}
+
 
 
 // AGENDA
@@ -168,7 +171,7 @@
             const faqContent = `
               <div class="faq-item-header">
                 <div class="flex items-center gap-4">
-                  <img src="images/Logo.png" alt="Club Logo" class="mt-2 w-10 h-10 object-contain" />
+                  <img src="/images/Mobai.svg" alt="Club Logo" class="mt-2 w-10 h-10 object-contain" />
                   <h4 class="text-lg lg:text-xl font-semibold">${faq.question}</h4>
                 </div>
                 <span class="toggle-icon">${openIndex === index ? '-' : '+'}</span>
