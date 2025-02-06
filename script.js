@@ -232,6 +232,60 @@ const mentorData = [
       { link: "https://linkedin.com/in/janesmith", icon: "./assests/linkedin.png" },
     ],
   },
+  {
+    name: "Omar Farouk Zouak",
+    title: "AI Student at ENSIA",
+    description: "Junior Data Scientist | QML Intern at CQTech ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
+  {
+    name: "Raid Abderrezak Ouahioune",
+    title: "AI Student at ENSIA",
+    description: "Junior machine learning & Software Engineer ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
+  {
+    name: "Abdenour BOUZIANE",
+    title: "AI Student at ENSIA",
+    description: "Software  and Mobile Developer",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
+  {
+    name: "Moulay Mohamed Bouabdelli",
+    title: "AI Student at ENSIA",
+    description: " machine learning Engineer | Design Manager  ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
+  {
+    name: "Mohamed Frihaoui",
+    title: "AI Student at ENSIA",
+    description: " machine learning Engineer | Web Developer  ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
+  {
+    name: "Douaa Djaid",
+    title: "AI Student at ENSIA",
+    description: " machine learning & Software Engineer ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
 
   
   // Add more mentor objects as needed
