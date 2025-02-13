@@ -286,6 +286,15 @@ const mentorData = [
       { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
     ],
   },
+  {
+    name: "Said Senhadji",
+    title: "AI and Data science student in ESI sba ",
+    description: " ML enthusiast  & Software Engineer ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
 
   
   // Add more mentor objects as needed
