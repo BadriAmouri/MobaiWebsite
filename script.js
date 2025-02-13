@@ -197,6 +197,15 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 
 const mentorData = [
   {
+    name: "Said Senhadji",
+    title: "AI and Data science student in ESI sba ",
+    description: " ML enthusiast  & Software Engineer ",
+    media: [
+      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
+      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
+    ],
+  },
+  {
     name: "OUDDANE Youcef fahed",
     title: " Ai & data sciece student student at Esi Sba",
     description: "Flutter developer | Software enginner | Ai & data scientist ",
@@ -286,15 +295,7 @@ const mentorData = [
       { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
     ],
   },
-  {
-    name: "Said Senhadji",
-    title: "AI and Data science student in ESI sba ",
-    description: " ML enthusiast  & Software Engineer ",
-    media: [
-      { link: "https://instagram.com/markwilson", icon: "./assests/instagram.png" },
-      { link: "https://linkedin.com/in/markwilson", icon: "./assests/linkedin.png" },
-    ],
-  },
+  
 
   
   // Add more mentor objects as needed
